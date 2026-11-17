@@ -1,0 +1,15 @@
+# Dépendances et fichiers générés courants
+node_modules/
+dist/
+build/
+coverage/
+
+# Configuration locale et secrets
+.env
+.env.*
+!.env.example
+
+# Fichiers temporaires locaux
+.DS_Store
+Thumbs.db
+*.log
