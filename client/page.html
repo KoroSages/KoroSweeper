@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KoroSweeper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="game.css">
+  </head>
+  <body class="game-page theme-jungle">
+    <main class="game-shell">
+      <section class="game-leaderboard" aria-labelledby="game-leaderboard-title">
+        <h2 id="game-leaderboard-title">Ranking</h2>
+        <ol id="game-leaderboard-list"></ol>
+      </section>
+      <section class="game-stage" aria-label="Board">
+        <div class="game-frame" aria-label="JungleSweeper">
+          <div class="header-frame" id="header-frame">
+            <div class="counter-frame counter-frame--left" id="flags-counter" aria-label="Remaining flags"></div>
+            <button class="face-button" id="new-game" type="button" aria-label="New game"></button>
+            <div class="counter-frame counter-frame--right" id="timer-counter" aria-label="Timer"></div>
+          </div>
+          <div class="board-frame" id="board-frame">
+            <div class="board" id="board" role="group" aria-label="Board">Loading…</div>
+          </div>
+        </div>
+        <div class="mark-tools" aria-label="Selection">
+          <button class="mark-button mark-button--flag" id="mark-flag" type="button" aria-label="Select flag" title="flag" aria-pressed="true"><span aria-hidden="true"></span></button>
+          <button class="mark-button mark-button--turtle" id="mark-turtle" type="button" aria-label="Select Jasmine" title="Jasmine" aria-pressed="false"><span aria-hidden="true"></span></button>
+        </div>
+        <p class="game-message" id="game-message" role="status" aria-live="polite"></p>
+      </section>
+      <div class="game-sidebar">
+        <aside class="game-rules" id="game-rules" aria-label="Rules"></aside>
+        <section class="game-completion" id="game-completion" aria-live="polite" hidden></section>
+      </div>
+    </main>
+    <script defer src="game.js"></script>
+    <script defer src="rules.js"></script>
+    <script defer src="leaderboard.js"></script>
+    <script defer src="page.js"></script>
+  </body>
+</html>
