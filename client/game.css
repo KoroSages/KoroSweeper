@@ -57,7 +57,14 @@
 }
 
 .game-rules { min-height: 240px; }
-.game-completion:not([hidden]) { display: block; }
+.game-completion:not([hidden]) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 24px;
+  display: block;
+}
 
 .game-leaderboard h2 {
   margin: 0 0 14px;
@@ -381,6 +388,11 @@
     width: min(100%, 506px);
     margin: 0 auto 28px;
     transform: none;
+  }
+  .game-completion:not([hidden]) {
+    position: static;
+    width: auto;
+    margin-top: 0;
   }
   .game-rules { min-height: 0; }
 }

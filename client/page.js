@@ -218,7 +218,7 @@ function render() {
   renderTimer();
   flagsCounter.setAttribute('aria-label', `${flagsLeft(game)} drapeaux restants`);
   faceButton.className = `face-button face-button--${game.status}`;
-  message.textContent = game.status === 'won' ? 'Gagné !' : game.status === 'lost' ? 'Perdu !' : '';
+  message.textContent = game.status === 'won' ? 'Won !' : game.status === 'lost' ? 'Lost !' : '';
   completionElement.hidden = game.status !== 'won';
   if (game.status === 'won') {
     completionElement.textContent = `Nice job you cleared the mines in ${formatDuration(elapsedMilliseconds())}, Jasmine is unbothered and will keep sleeping. Post your score on discord if you want to appear on the rankings`;
